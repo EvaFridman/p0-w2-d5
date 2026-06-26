@@ -1,3 +1,4 @@
+Hh
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -17,7 +18,7 @@
         <a class="skip-link" href="#main">Перейти к содержимому</a>
         <header>
             <div class="header-logo" aria-label="Лого"></div>
-            <h4>Cadence</h4>
+            <span>Cadence</span>
 
             <nav class="only-mobile">
                 <details>
@@ -29,12 +30,25 @@
                         <li><a href="#tarifs">Тарифы</a></li>
                         <li><a href="#questions">Вопросы</a></li>
                     </ul>
-                    <input type="checkbox" class="theme-checkbox" aria-label="Переключить тему">
+                    <input type="checkbox" class="theme-checkbox">
                     <label for="theme-toggle">
                         <span class="theme-icon-sun" area-label="Светлая тема">☀</span>
                         <span class="theme-icon-moon" area-label="Тёмная тема">☾</span>
                     </label>
-                    <button>Начать</button>
+                    <input type="checkbox" id="popup-toggle-1" class="popup-checkbox">
+                    <label for="popup-toggle-1" class="open-btn">Начать</label>
+                    <div class="popup-overlay">
+                        <div class="popup-content">
+                            <button class="close-btn">&times;</button>
+                            <h3>Ранний доступ</h3>
+                            <p>Оставь e-mail — пришлём приглашение и советы по фокусу.</p>
+                            <form class="subscription-form">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="[email protected]" autocomplete="email" required>
+                                <button type="submit">Подписаться</button>
+                            </form>
+                        </div>
+                    </div>
                 </details>
             </nav>
 
@@ -71,9 +85,22 @@
                     <p class="only-desktop">Cadence помогает выстроить привычки и удержать внимание — мягкими ритмами фокуса вместо жёстких дедлайнов.</p>
                     <p class="only-tablet">Привычки и внимание — мягкими ритмами фокуса вместо жёстких дедлайнов.</p>
                     <p class="only-mobile">Привычки и внимание — мягкими ритмами фокуса.</p>
-                    <button class="desktop-mobile">Попробовать бесплатно</button>
+                    <input type="checkbox" id="popup-toggle-2" class="popup-checkbox">
+                    <label for="popup-toggle-2" class="open-btn desktop-mobile">Попробовать бесплатно</label>
+                    <label for="popup-toggle-2" class="open-btn only-tablet">Попробовать</label>
+                    <div class="popup-overlay">
+                        <div class="popup-content">
+                            <button class="close-btn">&times;</button>
+                            <h3>Ранний доступ</h3>
+                            <p>Оставь e-mail — пришлём приглашение и советы по фокусу.</p>
+                            <form class="subscription-form">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="[email protected]" autocomplete="email" required>
+                                <button type="submit">Подписаться</button>
+                            </form>
+                        </div>
+                    </div>
                     <button class="desktop-mobile">Смотреть демо</button>
-                    <button class="only-tablet">Попробовать</button>
                     <button class="only-tablet">Демо</button>
                 </div>
 
@@ -203,8 +230,21 @@
                         <li>✓ 3 привычки</li>
                         <li>✓ Базовая аналитика</li>
                     </ul>
-                    <button class="disabled desktop-mobile">Выбрать Старт</button>
-                    <button>Выбрать</button>
+                    <input type="checkbox" id="popup-toggle-3" class="popup-checkbox">
+                    <label for="popup-toggle-3" class="open-btn disabled desktop-mobile">Выбрать Старт</label>
+                    <label for="popup-toggle-3" class="open-btn">Выбрать</label>
+                    <div class="popup-overlay">
+                        <div class="popup-content">
+                            <button class="close-btn">&times;</button>
+                            <h3>Ранний доступ</h3>
+                            <p>Оставь e-mail — пришлём приглашение и советы по фокусу.</p>
+                            <form class="subscription-form">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="[email protected]" autocomplete="email" required>
+                                <button type="submit">Подписаться</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="tarif-ritm">
@@ -221,8 +261,21 @@
                         </li>
                         <li>✓ Тихие режимы</li>
                     </ul>
-                    <button class="disabled desktop-mobile">Выбрать Ритм</button>
-                    <button>Выбрать</button>
+                    <input type="checkbox" id="popup-toggle-4" class="popup-checkbox">
+                    <label for="popup-toggle-4" class="open-btn disabled desktop-mobile">Выбрать Ритм</label>
+                    <label for="popup-toggle-4" class="open-btn">Выбрать</label>
+                    <div class="popup-overlay">
+                        <div class="popup-content">
+                            <button class="close-btn">&times;</button>
+                            <h3>Ранний доступ</h3>
+                            <p>Оставь e-mail — пришлём приглашение и советы по фокусу.</p>
+                            <form class="subscription-form">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="[email protected]" autocomplete="email" required>
+                                <button type="submit">Подписаться</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="tarif-team only-desktop">
@@ -234,8 +287,21 @@
                         <li>✓ Общие цели</li>
                         <li>✓ Админ-панель</li>
                     </ul>
-                    <button class="disabled only-desktop">Выбрать Команда</button>
-                    <button>Выбрать</button>
+                    <input type="checkbox" id="popup-toggle-5" class="popup-checkbox">
+                    <label for="popup-toggle-5" class="open-btn disabled only-desktop">Выбрать Команда</label>
+                    <label for="popup-toggle-5" class="open-btn">Выбрать</label>
+                    <div class="popup-overlay">
+                        <div class="popup-content">
+                            <button class="close-btn">&times;</button>
+                            <h3>Ранний доступ</h3>
+                            <p>Оставь e-mail — пришлём приглашение и советы по фокусу.</p>
+                            <form class="subscription-form">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="[email protected]" autocomplete="email" required>
+                                <button type="submit">Подписаться</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -243,6 +309,12 @@
                 <h2 class="desktop-tablet">Частые вопросы</h2>
                 <h2 class="only-mobile">Вопросы</h2>
 
+                <details class="q1">
+                    <summary class="only-desktop">Нужна ли карта для пробного периода?</summary>
+                    <p class="only-desktop">Нет. 14 дней бесплатно без карты — подключишь оплату, только если решишь остаться.</p>
+                    <summary class="tablet-mobile">Нужна ли карта?</summary>
+                    <p class="tablet-mobile">Нет, 14 дней без карты.</p>
+                </details>
                 <details class="q1">
                     <summary class="only-desktop">Нужна ли карта для пробного периода?</summary>
                     <p class="only-desktop">Нет. 14 дней бесплатно без карты — подключишь оплату, только если решишь остаться.</p>
@@ -277,7 +349,20 @@
                 <h2>Поймай свой ритм сегодня</h2>
                 <p class="only-desktop">Подпишись на ранний доступ и советы по фокусу.</p>
                 <p class="only-mobile"></p>
-                <button>Подписаться</button>
+                <input type="checkbox" id="popup-toggle-6" class="popup-checkbox">
+                <label for="popup-toggle-6" class="open-btn">Зарегистрироваться</label>
+                <div class="popup-overlay">
+                    <div class="popup-content">
+                        <button class="close-btn">&times;</button>
+                        <h3>Ранний доступ</h3>
+                        <p>Оставь e-mail — пришлём приглашение и советы по фокусу.</p>
+                        <form class="subscription-form">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="[email protected]" autocomplete="email" required>
+                            <button type="submit">Подписаться</button>
+                        </form>
+                    </div>
+                </div>
             </section>
 
         </main>

@@ -1,0 +1,267 @@
+/* General styles */
+* { box-sizing: border-box; }
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+    background-color: var(--bg);
+    color: var(--text);
+    font: "Inter";
+    line-height: 1.6;
+}
+
+.skip-link {
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    background-color: var(--space-2);
+    padding: var(--space-2);
+}
+
+.skip-link:focus {
+    top: 0;
+    z-index: 1000;
+}
+
+/* Header styles */
+
+header {
+    padding: 14px 0 14px 18px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--surface);
+    z-index: 1000;
+}
+
+.header-logo-name {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+header span {
+    font: bold var(--text-base) "Space Grotesk";
+}
+
+/* Info styles */
+.main-info {
+    padding: var(--space-4) var(--space-8);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--space-4);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--surface-2);
+}
+
+.info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.new-ritm {
+    background-color: var(--decoration-bg);
+    border: 1px solid var(--decoration-border);
+    border-radius: var(--lg);
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+}
+
+.new-ritm span {
+    color: var(--primary);
+    font: var(--text-xs) "Inter";
+}
+
+h1 {
+    font: bold var(--text-2xl) "Space Grotesk";
+}
+
+.info p {
+    font: var(--text-base) "Inter";
+}
+
+.info .demo,
+.info .open-btn-2 {
+    font: var(--text-base) "Inter";
+    width: 100%;
+}
+
+.info-abstract-geometry {
+    width: 100%;
+    height: 80%;
+    border-radius: var(--md);
+    border: 2px solid #e2e8f0;
+    background-color: #dbeafe;
+    position: relative;
+}
+
+.full-circle {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: var(--pill);
+    background-color: var(--primary);
+    opacity: .8;
+    top: 18%;
+    left: 18%;
+}
+
+.rotated-square {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: var(--md);
+    background: var(--primary);
+    opacity: .7;
+    bottom: 18%;
+    right: 20%;
+    transform: rotate(18deg);
+}
+
+/* Statistics styles */
+.statistics {
+    background-color: var(--surface);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4) var(--space-3);
+    padding: var(--space-6) var(--space-4);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.statistics div {
+    text-align: center;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.statistics-number {
+    color: var(--primary);
+    font: bold var(--text-xl) "Space Grotesk";
+}
+
+.statistics-caption {
+    color: var(--text-mutted);
+    font: var(--text-xs) "Inter";
+}
+
+/* Instruments styles */
+.instruments {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: var(--space-3);
+    padding: var(--space-8) var(--space-4);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Tarifs styles */
+.tarifs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: var(--space-3);
+    padding: var(--space-8) var(--space-4);
+    background-color: var(--surface);
+}
+
+.tarifs h2 {
+    text-align: center;
+    font: bold var(--text-xl) "Space Grotesk";
+}
+
+/* Questions styles */
+.questions {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: var(--space-3);
+    padding: var(--space-8) var(--space-4);
+}
+
+.questions h2 {
+    text-align: center;
+    font: bold var(--text-xl) "Space Grotesk";
+}
+
+/* Subscribe styles */
+.subscribe {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    place-items: center;
+    background-color: var(--primary);
+    color: var(--surface);
+    border-radius: var(--md);
+    margin: 0 var(--space-4) var(--space-8) var(--space-4);
+    padding: var(--space-8) var(--space-4);
+}
+
+.subscribe h2 {
+    font: bold var(--text-xl) "Space Grotesk";
+}
+
+.subscribe p {
+    font: var(--text-sm) "Inter";
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--text);
+    color: var(--text-mutted);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    padding: var(--space-8) var(--space-4) var(--space-6);
+}
+
+.footer-info span {
+    font: bold var(--text-base) "Space Grotesk";
+    color: var(--surface);
+}
+
+h5 {
+    font: bold var(--text-xs) "Inter";
+    color: var(--surface);
+}
+
+.product span,
+.company span,
+.support span,
+.footer-info p,
+time {
+    font: var(--text-xs) "Inter";
+    color: var(--text-mutted);
+}
+
+.product,
+.company,
+.support {
+    display: grid;
+    gap: var(--space-2);
+}
+
+time {
+    border-top: 1px solid var(--text-mutted);
+    padding-top: var(--space-4);
+}
+
+/* Global */
+.only-desktop,
+.only-tablet,
+.desktop-tablet {
+    display: none;
+}

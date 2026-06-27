@@ -169,7 +169,6 @@
     font-size: var(--text-sm);
     line-height: 1;
     z-index: 2;
-    user-select: none;
 }
 
 .theme-checkbox:checked + .theme-slider::after {
@@ -625,4 +624,32 @@ button:hover,
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+@media (min-width: 640px) {
+    .open-btn-7 {
+        background-color: var(--primary);
+        color: var(--surface);
+        font: 600 var(--text-base) "Inter";
+        padding: var(--space-2) var(--space-3);
+        border-radius: var(--sm);
+        text-align: center;
+    }
+
+    /* Theme changer */
+    .theme-slider {
+        margin-top: 0;
+    }
+
+    /* Pulsation block */
+    .pulse-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: var(--pill);
+        background-color: var(--primary);
+        animation: pulse 2s infinite ease-out;
+    }
+}
+
+@media (min-width: 1024px) {
 }

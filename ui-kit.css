@@ -1,5 +1,6 @@
 /* Decorations */
-.header-logo-container {
+.header-logo-container,
+.footer-logo-container {
     width: 26px;
     height: 26px;
     border-radius: var(--sm);
@@ -9,7 +10,8 @@
     justify-content: center;
 }
 
-.header-logo {
+.header-logo,
+.footer-logo {
     width: 10px;
     height: 10px;
     border-radius: var(--pill);
@@ -324,6 +326,9 @@ button:hover,
     gap: var(--space-3);
     padding: var(--space-4);
     box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .instruments .card:hover,
@@ -411,6 +416,70 @@ button:hover,
     transform: rotate(45deg);
 }
 
+/* Team card */
+.team-card {
+    background-color: transparent;
+    perspective: 1000px;
+    padding: var(--space-6);
+    border-radius: var(--lg);
+    width: 220px;
+    height: 280px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.team-card-inner {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+
+.team-card-front,
+.team-card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--md);
+}
+
+.team-card-front {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, .10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-card-front div {
+    width: 88px;
+    height: 88px;
+    border-radius: var(--pill);
+    background: var(--decoration-border);
+    margin-bottom: var(--space-4);
+}
+
+.team-card:hover .team-card-inner,
+.team-card:focus-within .team-card-inner {
+    transform: rotateY(180deg);
+}
+
+.team-card-back {
+    background: var(--primary);
+    color: var(--surface);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, .3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
 /* Tarifs card */
 .tarif-start,
 .tarif-team {
@@ -448,6 +517,10 @@ button:hover,
     font: bold var(--text-2xl) "Space Grotesk";
 }
 
+.green {
+    color: var(--success);
+}
+
 .ritm-bage {
     position: absolute;
     top: -11px;
@@ -460,8 +533,20 @@ button:hover,
 }
 
 .open-btn-3,
-.open-btn-4,
 .open-btn-5 {
+    font: var(--text-base) "Inter";
+    width: 100%;
+    background-color: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--md);
+    padding: var(--space-3);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.open-btn-4 {
     font: var(--text-base) "Inter";
     width: 100%;
     background-color: var(--primary);
@@ -626,14 +711,17 @@ button:hover,
     cursor: pointer;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 640px) and (max-width: 1023px) {
     .open-btn-7 {
         background-color: var(--primary);
         color: var(--surface);
         font: 600 var(--text-base) "Inter";
-        padding: var(--space-2) var(--space-3);
+        padding: var(--space-1) var(--space-3);
+        height: 24px;
         border-radius: var(--sm);
         text-align: center;
+        display: flex;
+        align-items: center;
     }
 
     /* Theme changer */
@@ -652,4 +740,80 @@ button:hover,
 }
 
 @media (min-width: 1024px) {
+    .open-btn-7 {
+        background-color: var(--primary);
+        color: var(--surface);
+        font: 600 var(--text-base) "Inter";
+        padding: var(--space-1) var(--space-3);
+        height: 24px;
+        border-radius: var(--sm);
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .theme-slider {
+        margin-top: 0;
+    }
+
+    /* Pulsation block */
+    .pulse-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: var(--pill);
+        background-color: var(--primary);
+        animation: pulse 2s infinite ease-out;
+    }
+
+    /* Tooltip */
+    .tooltip-container {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .analytics-tip {
+        visibility: hidden;
+        width: 150px;
+        background-color: var(--text);
+        color: var(--surface);
+        text-align: left;
+        border-radius: var(--sm);
+        padding: var(--space-1);
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip-trigger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        border-radius: var(--pill);
+        border: 1.5px solid var(--text-mutted);
+        color: var(--text-mutted);
+        font: 600 var(--text-xs) "Inter";
+        cursor: pointer;
+    }
+    
+    .tooltip-trigger:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+
+    .tooltip-container:hover .analytics-tip,
+    .tooltip-container:focus-within .analytics-tip {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Subscribe button */
+    .open-btn-6 {
+        font: var(--text-lg) "Inter";
+        width: fit-content;
+    }
 }
